@@ -43,4 +43,4 @@ summary(diamonds)
 
     #> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-3.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-4.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-5.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-6.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-7.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-8.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-9.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-10.png)<!-- -->

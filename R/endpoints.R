@@ -2,6 +2,17 @@
 
 #* @apiDescription dfsdfdsf
 
+#* Retorna a previsão do preço do diamante
+#* @param carat número real
+#* @param cut Ideal, Premium, Good, Very Good, Fair
+#* @param color D, E, F, G, H I, J
+#* @post /sum
+function(carat,cut,color,clarity,depth,table,x,y,z){
+  model<-readRDS('Model/diamonds_final_model.rds')
+  browser()  # stopwatch
+  as.numeric(a) + as.numeric(b)
+}
+
 #* Escreve uma mensagem
 #* @param msg A mensagem para escrever
 #* @param titulo o titulo

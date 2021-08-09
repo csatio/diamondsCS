@@ -30,5 +30,27 @@ summary(diamonds)
 
 ```{r , echo = FALSE}
 ggplot(diamonds, aes(x=price)) + geom_histogram()
+
+ggplot(diamonds, aes(x=carat, y=price)) + geom_point()
+
+ggplot(diamonds, aes(cut, price)) + 
+  geom_boxplot()
+
+ggplot(diamonds, aes(color, price)) + 
+  geom_boxplot()
+
+ggplot(diamonds, aes(clarity, price)) + 
+  geom_boxplot()
+
+ggplot(diamonds, aes(x=depth, y=price)) + geom_point()
+
+ggplot(diamonds, aes(x=table, y=price)) + geom_point()
+
+ggplot(diamonds, aes(x=x, y=price)) + geom_point()
+
+ggplot(diamonds, aes(x=y, y=price)) + geom_point()
+
+ggplot(diamonds, aes(x=z, y=price)) + geom_point()
+
 ```
 
