@@ -36,12 +36,14 @@ function(carat,cut,color,clarity,depth,table,x,y,z){
 
   diamonds_final_model<-readRDS('diamonds_final_model.rds')
 
-
-  diamonds_com_previsao <- mutate(diamonds2,price_pred = exp(predict(diamonds_final_model, new_data = diamonds2)$.pred))       #### exp para reverter o log
-
+  diamonds_final_model
 
 
-  tail(diamonds_com_previsao,n=1)
+  #diamonds_com_previsao <- mutate(diamonds2,price_pred = exp(predict(diamonds_final_model, new_data = diamonds2)$.pred))       #### exp para reverter o log
+
+
+
+  #tail(diamonds_com_previsao,n=1)
 
 }
 
