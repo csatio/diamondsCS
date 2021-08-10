@@ -3,14 +3,44 @@
 #* @apiDescription dfsdfdsf
 
 #* Retorna a previsão do preço do diamante
-#* @param carat número real
-#* @param cut Ideal, Premium, Good, Very Good, Fair
+#* @param carat número real 0.2 a 5.01 (média 0.7979)
+#* @param cut Fair, Good, Very Good, Premium, Ideal
 #* @param color D, E, F, G, H I, J
-#* @post /sum
+#* @param clarity I1, SI2, SI1, VS2, VS1, VVS2, VVS1, IF
+#* @param depth 43 a 79 (média 61.75)
+#* @param table 43 a 95 (média 57.46)
+#* @param x 0 a 10.74 (média 5.731)
+#* @param y 0 a 58.9 (média 5.735)
+#* @param z 0 a 31.8 (média 3.539)
+#* @post /diamondPrice
 function(carat,cut,color,clarity,depth,table,x,y,z){
-  model<-readRDS('Model/diamonds_final_model.rds')
-  browser()  # stopwatch
-  as.numeric(a) + as.numeric(b)
+  library(tidyverse)
+  library(tidymodels)
+
+  diamonds2<-diamonds %>%
+    mutate(price_log=log(price))
+  browser()
+
+  diamonds2<-diamonds2 %>% add_row("carat" = as.double(carat),
+                                   "cut" = cut,
+                                   "color" = color,
+                                   "clarity" =clarity,
+                                   "depth" = as.double(depth),
+                                   "table" = as.double(table),
+                                   "x" = as.double(x),
+                                   "y" = as.double(y),
+                                   "z" = as.double(z),
+                                   "price" = integer(1),
+                                   "price_log" = 0.0)
+
+
+  diamonds_com_previsao <- diamonds2 %>%
+    mutate(
+      price_pred = exp(predict(diamonds_final_model, new_data = .)$.pred)                     #### exp para reverter o log
+    )
+
+  tail(diamonds_com_previsao,n=1)
+
 }
 
 #* Escreve uma mensagem
