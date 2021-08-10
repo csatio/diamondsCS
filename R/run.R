@@ -1,7 +1,7 @@
 
 library(plumber)
 
-r <- plumb("R/endpoints.R")
+r <- plumb("endpoints.R")
 
 r$handle("GET", "/", function(req, res){
   2000
