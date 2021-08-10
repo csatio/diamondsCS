@@ -32,7 +32,7 @@ function(carat,cut,color,clarity,depth,table,x,y,z){
                                    "price" = integer(1),
                                    "price_log" = 0.0)
 
-  tail(diamonds_com_previsao,n=1)
+  tail(diamonds2,n=1)
 
   #diamonds_final_model<-readRDS('diamonds_final_model.rds')
 
