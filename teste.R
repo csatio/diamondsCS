@@ -1,7 +1,7 @@
 
 
 
-
+library(httr)
 
 params <- list( carat = 0.3,
                 cut = "Good",
