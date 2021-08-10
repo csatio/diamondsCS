@@ -19,7 +19,6 @@ function(carat,cut,color,clarity,depth,table,x,y,z){
 
   diamonds2<-diamonds %>%
     mutate(price_log=log(price))
-  browser()
 
   diamonds2<-diamonds2 %>% add_row("carat" = as.double(carat),
                                    "cut" = cut,
@@ -32,6 +31,8 @@ function(carat,cut,color,clarity,depth,table,x,y,z){
                                    "z" = as.double(z),
                                    "price" = integer(1),
                                    "price_log" = 0.0)
+
+  diamonds_final_model<-readRDS('diamonds_final_model.rds')
 
 
   diamonds_com_previsao <- diamonds2 %>%

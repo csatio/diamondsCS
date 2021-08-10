@@ -5,9 +5,13 @@ RUN R -e 'install.packages("tidyverse")'
 RUN R -e 'install.packages("tidymodels")'
 
 
-COPY . .
+COPY endpoints.R /
+
+COPY run.R /
+
+COPY diamonds_final_model.R /
 
 
 EXPOSE 8080
 
-CMD ["Rscript" , "R/run.R"]
+CMD ["Rscript" , "run.R"]
