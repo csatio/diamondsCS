@@ -22,3 +22,4 @@ COPY diamonds_final_model.rds /
 EXPOSE 8080
 
 CMD ["Rscript" , "run.R"]
+
