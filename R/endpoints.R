@@ -39,6 +39,7 @@ function(carat,cut,color,clarity,depth,table,x,y,z){
       price_pred = exp(predict(diamonds_final_model, new_data = .)$.pred)                     #### exp para reverter o log
     )
 
+
   tail(diamonds_com_previsao,n=1)
 
 }
