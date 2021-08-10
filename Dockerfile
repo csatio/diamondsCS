@@ -4,7 +4,7 @@ COPY endpoints.R /
 
 COPY run.R /
 
-COPY diamonds_final_model.ods /
+COPY diamonds_final_model.rds /
 
 EXPOSE 8080
 
