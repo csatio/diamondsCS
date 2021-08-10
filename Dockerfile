@@ -1,5 +1,8 @@
 FROM rstudio/plumber
 
+RUN R -e 'install.packages("tidyverse")'
+RUN R -e 'install.packages("tidymodels")'
+
 COPY endpoints.R /
 
 COPY run.R /
