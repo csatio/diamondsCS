@@ -9,6 +9,10 @@ RUN R -e 'install.packages("ggplot2")'
 RUN R -e 'install.packages("vip")'
 RUN R -e 'install.packages("jsonlite")'
 
+RUN R -e 'install.packages("workflows")'
+
+RUN R -e 'install.packages("magrittr")'
+
 
 COPY endpoints.R /
 
