@@ -92,21 +92,3 @@ function(req, id, name) {
 }
 
 
-#* Retorna a previsão do preço do diamante
-#* @param carat número real 0.2 a 5.01 (média 0.7979)
-#* @param cut Fair, Good, Very Good, Premium, Ideal
-#* @param color D, E, F, G, H I, J
-#* @param clarity I1, SI2, SI1, VS2, VS1, VVS2, VVS1, IF
-#* @param depth 43 a 79 (média 61.75)
-#* @param table 43 a 95 (média 57.46)
-#* @param x 0 a 10.74 (média 5.731)
-#* @param y 0 a 58.9 (média 5.735)
-#* @param z 0 a 31.8 (média 3.539)
-#* @post /diamondp
-function(carat,cut,color,clarity,depth,table,x,y,z){
-
-  diamonds2 <- mutate(diamonds,price_log=log(price))
-  tail(diamonds2,n=1)
-
-
-}
