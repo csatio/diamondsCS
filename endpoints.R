@@ -12,7 +12,7 @@
 #* @param x 0 a 10.74 (média 5.731)
 #* @param y 0 a 58.9 (média 5.735)
 #* @param z 0 a 31.8 (média 3.539)
-#* @post /diamondprice
+#* @post /diamond
 function(carat,cut,color,clarity,depth,table,x,y,z){
   #library(tidyverse)
   #library(tidymodels)
@@ -63,7 +63,6 @@ function(msg = "", titulo = "") {
 #* @param b O segundo número
 #* @post /sum
 function(a, b){
-  browser()  # stopwatch
   as.numeric(a) + as.numeric(b)
 }
 
