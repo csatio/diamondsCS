@@ -1,6 +1,6 @@
 #* @apiTitle Exercício API
 
-#* @apiDescription dfsdfdsf
+#* @apiDescription Api em R
 
 #* Retorna a previsão do preço do diamante
 #* @param carat número real 0.2 a 5.01 (média 0.7979)
@@ -12,12 +12,13 @@
 #* @param x 0 a 10.74 (média 5.731)
 #* @param y 0 a 58.9 (média 5.735)
 #* @param z 0 a 31.8 (média 3.539)
-#* @post /diamondPrice
+#* @post /diamondprice
 function(carat,cut,color,clarity,depth,table,x,y,z){
   #library(tidyverse)
   #library(tidymodels)
 
   diamonds2 <- mutate(diamonds,price_log=log(price))
+  tail(diamonds2,n=1)
 
   #diamonds2 <- add_row(diamonds2,"carat" = as.double(carat),
   #                                 "cut" = cut,
