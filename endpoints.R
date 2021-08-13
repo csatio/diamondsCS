@@ -18,32 +18,32 @@ function(carat,cut,color,clarity,depth,table,x,y,z){
   library(tidymodels)
 
   diamonds2 <- mutate(diamonds,price_log=log(price))
-  tail(diamonds2,n=1)
-
-  #diamonds2 <- add_row(diamonds2,"carat" = as.double(carat),
-  #                                 "cut" = cut,
-  #                                 "color" = color,
-  #                                 "clarity" =clarity,
-  #                                 "depth" = as.double(depth),
-  #                                 "table" = as.double(table),
-  #                                 "x" = as.double(x),
-  #                                 "y" = as.double(y),
-  #                                 "z" = as.double(z),
-  #                                 "price" = integer(1),
-  #                                 "price_log" = 0.0)
 
 
-
-  #diamonds_final_model<-readRDS('diamonds_final_model.rds')
+  diamonds2 <- add_row(diamonds2,"carat" = as.double(carat),
+                                   "cut" = cut,
+                                   "color" = color,
+                                   "clarity" =clarity,
+                                   "depth" = as.double(depth),
+                                   "table" = as.double(table),
+                                   "x" = as.double(x),
+                                   "y" = as.double(y),
+                                   "z" = as.double(z),
+                                   "price" = integer(1),
+                                   "price_log" = 0.0)
 
 
 
-
-  #diamonds_com_previsao <- mutate(diamonds2,price_pred = exp(predict(diamonds_final_model, new_data = diamonds2)$.pred))       #### exp para reverter o log
-
+  diamonds_final_model<-readRDS('diamonds_final_model.rds')
 
 
-  #return(tail(diamonds_com_previsao,n=1))
+
+
+  diamonds_com_previsao <- mutate(diamonds2,price_pred = exp(predict(diamonds_final_model, new_data = diamonds2)$.pred))       #### exp para reverter o log
+
+
+
+  tail(diamonds_com_previsao,n=1)
 
   #return(tail(diamonds2,n=1))
 
