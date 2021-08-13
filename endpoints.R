@@ -19,17 +19,17 @@ function(carat,cut,color,clarity,depth,table,x,y,z){
 
   diamonds2 <- mutate(diamonds,price_log=log(price))
 
-  diamonds2 <- add_row(diamonds2,"carat" = as.double(carat),
-                                   "cut" = cut,
-                                   "color" = color,
-                                   "clarity" =clarity,
-                                   "depth" = as.double(depth),
-                                   "table" = as.double(table),
-                                   "x" = as.double(x),
-                                   "y" = as.double(y),
-                                   "z" = as.double(z),
-                                   "price" = integer(1),
-                                   "price_log" = 0.0)
+  #diamonds2 <- add_row(diamonds2,"carat" = as.double(carat),
+  #                                 "cut" = cut,
+  #                                 "color" = color,
+  #                                 "clarity" =clarity,
+  #                                 "depth" = as.double(depth),
+  #                                 "table" = as.double(table),
+  #                                 "x" = as.double(x),
+  #                                 "y" = as.double(y),
+  #                                 "z" = as.double(z),
+  #                                 "price" = integer(1),
+  #                                 "price_log" = 0.0)
 
 
 
