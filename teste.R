@@ -4,7 +4,7 @@
 library(httr)
 library(jsonlite)
 
-params <- list( carat = 0.3,
+params <- list( carat = 0.4,
                 cut = "Good",
                 color = "J",
                 clarity = "VS1",
@@ -23,11 +23,9 @@ resp <- GET("https://diamondcs1-7faixalpza-uc.a.run.app/echo", query = params, e
 content(resp)[[1]]
 
 
-params <- list( a=3, b=5)
+params <- list( a=3, b=7)
 resp <- POST("https://diamondcs1-7faixalpza-uc.a.run.app/sum", body = params, encode = "json")
 content(resp)[[1]]
 
 
-resp <- GET("https://diamondcs1-7faixalpza-uc.a.run.app/hist")
-content(resp)
 
