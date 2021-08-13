@@ -14,8 +14,8 @@
 #* @param z 0 a 31.8 (média 3.539)
 #* @post /diamondPrice
 function(carat,cut,color,clarity,depth,table,x,y,z){
-  library(tidyverse)
-  library(tidymodels)
+  #library(tidyverse)
+  #library(tidymodels)
 
   diamonds2 <- mutate(diamonds,price_log=log(price))
 
@@ -44,7 +44,7 @@ function(carat,cut,color,clarity,depth,table,x,y,z){
 
   #return(tail(diamonds_com_previsao,n=1))
 
-  return(tail(diamonds2,n=1))
+  #return(tail(diamonds2,n=1))
 
 }
 
