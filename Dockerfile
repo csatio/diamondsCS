@@ -13,6 +13,8 @@ RUN R -e 'install.packages("workflows")'
 
 RUN R -e 'install.packages("magrittr")'
 
+RUN R -e 'install.packages("recipes")'
+
 
 COPY endpoints.R /
 
