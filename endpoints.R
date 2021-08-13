@@ -17,10 +17,9 @@ function(carat,cut,color,clarity,depth,table,x,y,z){
   library(tidyverse)
   library(tidymodels)
 
-  diamonds2<-diamonds %>%
-    mutate(price_log=log(price))
+  diamonds2 <- mutate(diamonds,price_log=log(price))
 
-  diamonds2<-diamonds2 %>% add_row("carat" = as.double(carat),
+  diamonds2 <- add_row(diamonds2,"carat" = as.double(carat),
                                    "cut" = cut,
                                    "color" = color,
                                    "clarity" =clarity,
