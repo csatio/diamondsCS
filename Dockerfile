@@ -15,6 +15,8 @@ RUN R -e 'install.packages("magrittr")'
 
 RUN R -e 'install.packages("recipes")'
 
+RUN R -e 'install.packages("glmnet")'
+
 
 COPY endpoints.R /
 
